@@ -1,0 +1,13 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": { "php": "8.2", "wp": "latest" },
+  "landingPage": "/wp-admin/tools.php?page=wma-setup",
+  "login": true,
+  "steps": [
+    { "step": "runWpInstallationWizard", "options": {} },
+    { "step": "setSiteOptions", "options": { "blogname": "Wild Morocco Adventures", "blogdescription": "Private journeys through Morocco" } },
+    { "step": "activatePlugin", "pluginPath": "/wordpress/wp-content/plugins/wma-core/wma-core.php" },
+    { "step": "activateTheme", "themeFolderName": "wild-morocco-adventures" },
+    { "step": "setSiteOptions", "options": { "permalink_structure": "/%postname%/" } }
+  ]
+}

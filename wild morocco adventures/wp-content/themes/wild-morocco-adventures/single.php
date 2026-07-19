@@ -1,0 +1,3 @@
+<?php
+/** Blog article. */
+get_header(); while ( have_posts() ) : the_post(); ?><article><header class="wma-article-hero" style="--article-image:url('<?php echo esc_url( has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'wma-hero' ) : wma_fallback_image( 'marrakech' ) ); ?>')"><div class="wma-container"><?php wma_breadcrumbs(); ?><span class="wma-eyebrow wma-eyebrow--light"><?php echo esc_html( get_the_date() ); ?></span><h1><?php the_title(); ?></h1><?php if ( has_excerpt() ) : ?><p><?php echo esc_html( get_the_excerpt() ); ?></p><?php endif; ?></div></header><div class="wma-section"><div class="wma-container wma-prose"><?php the_content(); wp_link_pages(); ?></div></div></article><?php endwhile; get_footer(); ?>

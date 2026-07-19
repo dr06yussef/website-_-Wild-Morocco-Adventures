@@ -1,0 +1,6 @@
+<?php
+/**
+ * Template Name: Destinations
+ */
+get_header(); the_post(); get_template_part( 'template-parts/page-hero' ); $terms = get_terms( array( 'taxonomy' => 'wma_region', 'hide_empty' => false ) ); $images = array( 'desert', 'atlas', 'marrakech', 'coast' ); ?>
+<section class="wma-section"><div class="wma-container"><div class="wma-prose wma-prose--intro"><?php the_content(); ?></div><div class="wma-region-list"><?php if ( ! is_wp_error( $terms ) ) : foreach ( $terms as $index => $term ) : ?><article><a class="wma-region-image" href="<?php echo esc_url( get_term_link( $term ) ); ?>" style="--region-image:url('<?php echo esc_url( wma_fallback_image( $images[ $index % 4 ] ) ); ?>')"></a><div><span class="wma-eyebrow"><?php esc_html_e( 'Region', 'wild-morocco-adventures' ); ?></span><h2><a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a></h2><?php if ( $term->description ) : ?><p><?php echo esc_html( $term->description ); ?></p><?php endif; ?><a class="wma-text-link" href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php esc_html_e( 'Explore this region', 'wild-morocco-adventures' ); ?> →</a></div></article><?php endforeach; endif; ?></div></div></section><?php get_footer(); ?>

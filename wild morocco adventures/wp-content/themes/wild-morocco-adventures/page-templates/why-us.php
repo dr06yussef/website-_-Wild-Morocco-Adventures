@@ -1,0 +1,7 @@
+<?php
+/**
+ * Template Name: Why Travel With Us
+ */
+get_header(); the_post(); get_template_part( 'template-parts/page-hero' ); ?>
+<section class="wma-section"><div class="wma-container wma-story-intro"><div><span class="wma-eyebrow"><?php esc_html_e( 'A considered way to travel', 'wild-morocco-adventures' ); ?></span><h2><?php esc_html_e( 'Personal without being complicated.', 'wild-morocco-adventures' ); ?></h2></div><div class="wma-rich-content"><?php the_content(); ?></div></div></section>
+<section class="wma-section wma-section--olive"><div class="wma-container"><div class="wma-process-grid"><article><span>01</span><h3><?php esc_html_e( 'Imagine', 'wild-morocco-adventures' ); ?></h3><p><?php esc_html_e( 'Share what excites you, what you want to avoid and how you like to move.', 'wild-morocco-adventures' ); ?></p></article><article><span>02</span><h3><?php esc_html_e( 'Design', 'wild-morocco-adventures' ); ?></h3><p><?php esc_html_e( 'A coherent route takes shape around season, pace and priorities.', 'wild-morocco-adventures' ); ?></p></article><article><span>03</span><h3><?php esc_html_e( 'Refine', 'wild-morocco-adventures' ); ?></h3><p><?php esc_html_e( 'Review the proposal and adjust details until it feels right.', 'wild-morocco-adventures' ); ?></p></article><article><span>04</span><h3><?php esc_html_e( 'Go', 'wild-morocco-adventures' ); ?></h3><p><?php esc_html_e( 'Travel with clear information and a local contact close at hand.', 'wild-morocco-adventures' ); ?></p></article></div></div></section><?php get_footer(); ?>

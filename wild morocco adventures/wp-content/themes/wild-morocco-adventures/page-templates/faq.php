@@ -1,0 +1,6 @@
+<?php
+/**
+ * Template Name: FAQ
+ */
+get_header(); the_post(); get_template_part( 'template-parts/page-hero' ); $faqs = new WP_Query( array( 'post_type' => 'wma_faq', 'post_status' => 'publish', 'posts_per_page' => 100, 'orderby' => 'menu_order title', 'order' => 'ASC' ) ); ?>
+<section class="wma-section"><div class="wma-container wma-faq-layout"><div><span class="wma-eyebrow"><?php esc_html_e( 'Helpful details', 'wild-morocco-adventures' ); ?></span><h2><?php esc_html_e( 'Planning your Morocco journey', 'wild-morocco-adventures' ); ?></h2><div class="wma-rich-content"><?php the_content(); ?></div></div><div class="wma-faq-list"><?php if ( $faqs->have_posts() ) : while ( $faqs->have_posts() ) : $faqs->the_post(); ?><details><summary><?php the_title(); ?><i aria-hidden="true">+</i></summary><div><?php the_content(); ?></div></details><?php endwhile; else : ?><div class="wma-empty-card"><h3><?php esc_html_e( 'Your questions can be answered personally.', 'wild-morocco-adventures' ); ?></h3><p><?php esc_html_e( 'Share your dates, route ideas and practical needs in the quotation form to receive guidance for your journey.', 'wild-morocco-adventures' ); ?></p></div><?php endif; wp_reset_postdata(); ?></div></div></section><?php get_footer(); ?>

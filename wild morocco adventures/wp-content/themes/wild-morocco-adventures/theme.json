@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "760px", "wideSize": "1180px" },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "clay", "name": "Clay", "color": "#B85C3B" },
+        { "slug": "olive", "name": "Atlas Olive", "color": "#263C32" },
+        { "slug": "sand", "name": "Desert Sand", "color": "#E6D3B2" },
+        { "slug": "ink", "name": "Charcoal", "color": "#18221E" },
+        { "slug": "ivory", "name": "Warm Ivory", "color": "#F7F2E8" },
+        { "slug": "white", "name": "White", "color": "#FFFFFF" }
+      ]
+    },
+    "spacing": { "units": ["px", "rem", "em", "%", "vw"], "blockGap": true },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        { "slug": "display", "name": "Display Serif", "fontFamily": "Georgia, 'Times New Roman', serif" },
+        { "slug": "body", "name": "Humanist Sans", "fontFamily": "'Segoe UI', Tahoma, Arial, sans-serif" }
+      ]
+    }
+  },
+  "styles": {
+    "color": { "background": "#F7F2E8", "text": "#18221E" },
+    "typography": { "fontFamily": "'Segoe UI', Tahoma, Arial, sans-serif", "lineHeight": "1.7" },
+    "elements": {
+      "heading": { "typography": { "fontFamily": "Georgia, 'Times New Roman', serif", "fontWeight": "400", "lineHeight": "1.08" } },
+      "link": { "color": { "text": "#B85C3B" } },
+      "button": { "border": { "radius": "999px" }, "color": { "background": "#B85C3B", "text": "#FFFFFF" } }
+    }
+  }
+}
